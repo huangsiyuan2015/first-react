@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";
+import { products } from "../data/products";
 
 export default class ProductTable extends Component {
   constructor(props) {
@@ -9,10 +10,11 @@ export default class ProductTable extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:4000/products").then(async (response) => {
-      const products = await response.json();
-      this.setState({ products });
-    });
+    // fetch("http://localhost:4000/products").then(async (response) => {
+    //   const products = await response.json();
+    //   this.setState({ products });
+    // });
+    this.setState({ products });
   }
 
   render() {
